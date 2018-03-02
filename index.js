@@ -46,8 +46,10 @@ module.exports = {
   },
 
   async importAll(name) {
-    if (name in modules)
+    if (name in modules) {
+      await modules[name]
       return modules[name]
+    }
     else
       throw new Error(`dynamic-imports unable to importAll(): "${name}" is not exported`)
   }
