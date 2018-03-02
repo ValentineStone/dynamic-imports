@@ -24,7 +24,8 @@ await dynamicImports.importAll('mjsDoge') // { default: 'wow', more: 'such more'
 
 ```
 ### Potential API changes / additions:
-```
+
+```javascript
 await dynamicImports.import('mjsDoge') // { default: 'wow', more: 'such more', stuff: 'very stuff' }
 await dynamicImports.importAs('mjsDoge', 'default', 'stuff') // { default: 'wow', stuff: 'very stuff' }
 await dynamicImports.importAs('mjsDoge', { doge: 'default' }) // { doge: 'wow' }
