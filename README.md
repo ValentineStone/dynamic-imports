@@ -3,7 +3,7 @@
 Import / require dynamically from string sources
 
 ```javascript
-let dynamicImports = require('dynamic-imports')
+const dynamicImports = require('dynamic-imports')
 
 await dynamicImports.provide('cjsModule', 'module.exports = "cjs"')
 await dynamicImports.require('cjsModule') // "cjs"
