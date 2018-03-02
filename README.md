@@ -2,7 +2,7 @@
 
 Import / require dynamically from string sources
 
-### API sketch:
+### Current API:
 
 ```javascript
 const dynamicImports = require('dynamic-imports')
