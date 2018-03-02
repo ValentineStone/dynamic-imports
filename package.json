@@ -1,0 +1,30 @@
+{
+  "name": "dynamic-imports",
+  "version": "0.0.1",
+  "description": "Import / require dynamically from string sources",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValentineStone/dynamic-imports.git"
+  },
+  "keywords": [
+    "es6",
+    "modules",
+    "require",
+    "import",
+    "export",
+    "provide",
+    "dynamic",
+    "string",
+    "source"
+  ],
+  "author": "Leonid Romanovsky <sirLeonidRomanovsky@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ValentineStone/dynamic-imports/issues"
+  },
+  "homepage": "https://github.com/ValentineStone/dynamic-imports#readme"
+}
