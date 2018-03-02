@@ -29,29 +29,13 @@ module.exports = {
     })
   },
 
-  async import(name, ...namedExports) {
-    if (name in modules) {
-      await modules[name]
-      if (namedExports.length) {
-        let selectedExports = {}
-        for (let namedExport of namedExports)
-          selectedExports[namedExport] = modules[name][namedExport]
-        return selectedExports
-      }
-      else
-        return modules[name].default
-    }
-    else
-      throw new Error(`dynamic-imports unable to import(): "${name}" is not exported`)
-  },
-
-  async importAll(name) {
+  async import(name) {
     if (name in modules) {
       await modules[name]
       return modules[name]
     }
     else
-      throw new Error(`dynamic-imports unable to importAll(): "${name}" is not exported`)
+      throw new Error(`dynamic-imports unable to import(): "${name}" is not exported`)
   }
 
 }
