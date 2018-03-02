@@ -1,0 +1,1 @@
+@node --experimental-vm-modules --experimental-modules test.mjs

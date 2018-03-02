@@ -21,6 +21,7 @@ await dynamicImports.export('mjsDoge', `
 await dynamicImports.import('mjsDoge') // 'wow'
 await dynamicImports.import('mjsDoge', 'default', 'stuff') // { default: 'wow', stuff: 'very stuff' }
 await dynamicImports.importAll('mjsDoge') // { default: 'wow', more: 'such more', stuff: 'very stuff' }
+//    ^^^^^^^^^^^^^^^^^^^^^^^^ potential deprecation
 
 ```
 ### Potential API changes / additions:
