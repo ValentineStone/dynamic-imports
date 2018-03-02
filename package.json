@@ -1,6 +1,6 @@
 {
   "name": "dynamic-imports",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Import / require dynamically from string sources",
   "main": "index.js",
   "scripts": {
