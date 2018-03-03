@@ -6,9 +6,9 @@ const linker = () => { throw new Error('dynamic-imports modules do not allow nes
 
 module.exports = {
 
-  provide(name, code) {
+  provide(name, code, { sandbox } = {}) {
     let script = new vm.Script(`(module => {${code};return module.exports})({exports:{}})`)
-    scripts[name] = script.runInNewContext()
+    scripts[name] = script.runInContext(vm.createContext(sandbox))
   },
 
   require(name) {
@@ -18,9 +18,9 @@ module.exports = {
       throw new Error(`dynamic-imports unable to require(): "${name}" is not provided`)
   },
 
-  export(name, code) {
+  export(name, code, { sandbox } = {}) {
     modules[name] = new Promise(async resolve => {
-      let module = new vm.Module(code, { context: vm.createContext() })
+      let module = new vm.Module(code, { context: vm.createContext(sandbox) })
       await module.link(linker)
       module.instantiate()
       await module.evaluate()
